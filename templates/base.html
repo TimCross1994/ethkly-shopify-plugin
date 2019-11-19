@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ethkly</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+
+<body>
+    <!-- if user.is_authenticated %-->
+    <nav class='sidenav'>
+        <ul id="header-links">
+            <li><a href="/">Dashboard</a></li>
+            <li><a href="/products">Products</a></li>
+            <li><a href="/orders">Orders</a></li>
+            <li><a href="/rental_analysis">Rental Analysis</a></li>
+            <li><a href="/settings">Settings</a></li>
+            <li><a href="/Account">Account</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+    {% block content %}
+    {% endblock %}
+   
+
+</body>
+</html>
